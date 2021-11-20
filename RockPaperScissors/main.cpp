@@ -1,6 +1,7 @@
 /*
   Arthur:Antoine Demount Price jr.
   Date:  11/19/2021
+  gmail: pricejr7777@gmail.com
   Note: I hope you like this game
 */
 #include <iostream>
