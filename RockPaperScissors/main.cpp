@@ -1,3 +1,8 @@
+/*
+  Arthur:Antoine Demount Price jr.
+  11/19/2021
+  I hope you like this game
+*/
 #include <iostream>
 #include <iomanip>
 #include <ctime>
