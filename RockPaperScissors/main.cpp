@@ -1,7 +1,7 @@
 /*
   Arthur:Antoine Demount Price jr.
-  11/19/2021
-  I hope you like this game
+  Date:  11/19/2021
+  Note: I hope you like this game
 */
 #include <iostream>
 #include <iomanip>
@@ -25,10 +25,10 @@ void Menu(){
 
            for (int display = 0;display <=8;display++)
            {
-             cout<<setfill(' ');
-             cout<<setw(85);
-              sleep(1);
-             cout<<menu[display]<<endl;
+             cout<<setfill(' '); //this will cover the space 
+             cout<<setw(85); // this will put the menu in the center of the screen
+              sleep(1);// this means wait one second
+             cout<<menu[display]<<endl; // this statment display menu
 
            }
 
@@ -37,16 +37,16 @@ void game(bool GameSwitch){
 
  while(GameSwitch){
     static int turns = 0;
-    srand(time(NULL));
+    srand(time(NULL)); // starting rand time to zero
     string UserChoice;
     int Choice;
-    int ComputerChoice=rand()%3;
-    static int ComputerPoints;
-    static int PlayerPoints;
+    int ComputerChoice=rand()%3; // starting random genorator
+    static int ComputerPoints;// Computer points
+    static int PlayerPoints; // Player points
     static int round =0;
     cout<<"                            Player points: |"<<PlayerPoints <<"| Computer points : |"<< ComputerPoints<<"| Spelling Mistakes: |"<<turns<<"|"<<" Round: |"<<round<<"| \n \n";
     sleep(1);
-    if (turns < 3)
+    if (turns < 3) // thus code keeps you from excieding the max limit more than three mistakes
     {
       cout<<"Please enter a choice rock, paper, or scissor  "<<endl;
       cin >>UserChoice;
@@ -56,11 +56,11 @@ void game(bool GameSwitch){
      cout<< "Sorry you made three spelling mistakes"<<endl;
      cout<<"\"Game Over\"";
      sleep(10);
-     GameSwitch=false;
-     break;
+     GameSwitch=false; //this stops the while loop 
+     break; // this break out the function
    }
-   if ( UserChoice == "rock"|| UserChoice == "ROCK"  )
-   {
+   if ( UserChoice == "rock"|| UserChoice == "ROCK"  )// this symbol || means or 
+    {
       Choice =0;
    }
 
@@ -74,7 +74,7 @@ void game(bool GameSwitch){
    }
    else
    {
-    if (turns <3)
+    if (turns <3) //this means if your turns again this is just keeping up with your mistakes if you mistake is under three execute the if statment 
       {
         cout<<"\"Spelling mistake you did not entered the right command\""<<endl;
         cout<< "\"\a you have to enter rock, paper,or scissor \""<<endl;
@@ -83,8 +83,11 @@ void game(bool GameSwitch){
         system(OSlinux);
         cout<<endl<<endl;
         turns++;
-        game(GameSwitch);
+        game(GameSwitch); // this is a recursion 
       }
+     /*
+     these two statments will execute at the bottom if your mistake is equal to 3
+     */
     GameSwitch=false;
     break;
    }
@@ -92,7 +95,7 @@ void game(bool GameSwitch){
   string ChoiceArray[3]={"rock","paper","scissor"};
   if(Choice == ComputerChoice)
   {
-     ComputerPoints++;
+     ComputerPoints++;// add points 
      PlayerPoints++;;
      cout<<"\"Its a tie\" "<<endl;
      cout<<" Your choice was "<<UserChoice;
@@ -105,7 +108,7 @@ void game(bool GameSwitch){
    else if(Choice != ComputerChoice  )
        {
             if (Choice == 0 && ComputerChoice == 2) // if enter rock and the computer enter scissors so you win
-             {
+             {  //this symbol && means and
                 PlayerPoints++;
                 cout<<" You win this round "<<endl;
                 cout<<" Your choice was "<<UserChoice;
@@ -175,7 +178,7 @@ void game(bool GameSwitch){
 
              round++;
 
-             if (ComputerPoints >= 3 && PlayerPoints < 3)
+             if (ComputerPoints >= 3 && PlayerPoints < 3)// this statment means if computer points is greater than 3 or equal to it and Player points is less than 3
             {
                system(OSWindows);
                system(OSlinux);
@@ -223,7 +226,7 @@ void game(bool GameSwitch){
 
 int main()
 {
-    bool GameSwitch =true;
+    bool GameSwitch =true;// this code keeps the loop runing
     Menu();//this the menu
     game(GameSwitch);// this is the function game
     return 0;
