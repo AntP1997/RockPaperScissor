@@ -12,7 +12,8 @@
 #define OSlinux "clear"
 using namespace std;
 
-void Menu(){
+void Menu()
+{
 
   string menu[13]={   {"|_____________________menu_______________________|"},
                      {"|  \"This program can run on linux and Windows\"   |"},
