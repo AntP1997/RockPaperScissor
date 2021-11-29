@@ -19,8 +19,8 @@ void Menu()
                      {"|  \"This program can run on linux and Windows\"   |"},
                       {"|  Hello this is a rock, paper,and scissors game,|"},
                       {"|   the rules are simple rock bets scissors      |"},
-                      {"|   paper bets rock and scissors bets paper.     |"},
-                      {"|    Also you have three spelling mistake to make|"},
+                      {"|   paper bets rock and, scissors bets paper.    |"},
+                      {"|   Also you have three spelling mistakes to make|"},
                       {"|   after three spelling mistakes game Over.     |"},
                       {"|    It is you the Player vs the computer.       |"},
                       {"|________________________________________________|"}};
