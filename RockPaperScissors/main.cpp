@@ -228,7 +228,9 @@ void game(bool GameSwitch){
 
 int main()
 {
-    bool GameSwitch =true;// this code keeps the loop runing
+    bool GameSwitch =true;// this code keeps the loop runing 
+    system(OSWindows);
+    system(OSlinux);
     Menu();//this the menu
     game(GameSwitch);// this is the function game
     return 0;
