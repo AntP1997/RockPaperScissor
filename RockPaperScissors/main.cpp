@@ -16,7 +16,7 @@ void Menu()
 {
 
   string menu[13]={   {"|_____________________menu_______________________|"},
-                     {"|  \"This program can run on linux and Windows\"   |"},
+                     {"|                                                 |"},
                       {"|  Hello this is a rock, paper,and scissors game,|"},
                       {"|   the rules are simple rock bets scissors      |"},
                       {"|   paper bets rock and, scissors bets paper.    |"},
